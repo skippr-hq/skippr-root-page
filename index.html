@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skippr - Product Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'skippr-bg': '#f7f3f1',
+            'skippr-dark': '#31221c',
+            'skippr-brown': '#49342c',
+            'skippr-red': '#d94f4f',
+            'skippr-muted': '#9d7264',
+            'skippr-border': '#dec4bc',
+            'skippr-light': '#eee3e0',
+          },
+          fontFamily: {
+            'dm': ['"DM Sans"', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { background-color: #f7f3f1; }
+  </style>
+</head>
+<body class="font-inter text-skippr-dark">
+
+  <!-- Nav -->
+  <nav class="h-20 flex items-center justify-between px-8 w-full fixed top-0 left-0 z-50 bg-skippr-bg">
+    <a href="#" class="shrink-0">
+      <img src="logo.png" alt="Skippr" class="h-[45px] w-auto" />
+    </a>
+    <div class="flex items-center gap-8 text-skippr-muted text-base">
+      <a href="#" class="hover:text-skippr-dark transition-colors">UX Mentor</a>
+      <a href="#" class="hover:text-skippr-dark transition-colors">Product Specialist</a>
+    </div>
+    <a href="#" class="bg-skippr-brown text-skippr-bg px-7 py-3 rounded-lg font-medium text-base hover:bg-skippr-dark transition-colors">
+      Talk to sales
+    </a>
+  </nav>
+  <!-- Nav spacer -->
+  <div class="h-20"></div>
+
+  <!-- Hero Background (fixed to viewport) -->
+  <div class="fixed top-0 left-0 w-full h-[683px] overflow-hidden -z-10">
+    <!-- Layer 1: Solid red background -->
+    <div class="absolute inset-0 bg-skippr-red"></div>
+    <!-- Layer 2: Photo at 80% opacity -->
+    <div class="absolute inset-0 opacity-80 overflow-hidden">
+      <img src="https://www.figma.com/api/mcp/asset/ec5ba89b-fff6-4774-bf00-2cf8e7dd6f6f" alt="" class="absolute bottom-[-20px] left-0 w-[125%] h-[125%] object-cover" />
+    </div>
+    <!-- Layer 3: Photo at full opacity -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="https://www.figma.com/api/mcp/asset/44e211b9-28e2-4bc0-b584-c541fe8dc7a7" alt="" class="absolute bottom-[-20px] left-0 w-[125%] h-[125%] object-cover grayscale" />
+    </div>
+  </div>
+
+  <!-- Hero Content (scrolls normally, reserves space) -->
+  <section class="relative w-full h-[683px]">
+    <div class="relative z-10 flex flex-col gap-10 items-start max-w-[1484px] mx-auto px-8 lg:px-[166px] pt-[77px]">
+      <div class="bg-white/15 border border-white rounded-lg px-4 py-1.5 flex items-center gap-2">
+        <span class="w-1.5 h-1.5 bg-skippr-red rounded-full"></span>
+        <span class="text-skippr-dark text-base tracking-wide">Build your autonomous company, one agent at a time</span>
+      </div>
+      <h1 class="font-dm font-medium text-[80px] leading-[88px] tracking-[-1.5px] text-skippr-dark max-w-[648px]">
+        Skip the job post.<br>
+        Hire <span class="text-skippr-red">Skippr agents</span> today
+      </h1>
+      <p class="text-skippr-dark text-2xl leading-[34px] max-w-[648px]">
+        Trained for the role. Delivering real work 24/7. Accountable to outcomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content (scrolls over the fixed hero background) -->
+  <main class="relative z-10 w-full bg-skippr-bg">
+
+    <!-- Meet Your AI Agents -->
+    <section class="px-[166px] py-20">
+      <h3 class="text-[28px] font-medium leading-10 text-center mb-10">Meet Your AI Agents</h3>
+
+      <div class="flex flex-col gap-6">
+        <!-- Two Agent Cards -->
+        <div class="flex gap-6">
+          <!-- UX Mentor Card -->
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[49px] w-1/2 h-[606px] flex flex-col justify-between">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-6">
+                <div class="w-12 h-12 bg-skippr-light rounded-xl flex items-center justify-center">
+                  <img src="https://www.figma.com/api/mcp/asset/b565d4c5-51be-4ccc-8938-6a0555e1bf04" alt="Scan Eye" class="w-6 h-6" />
+                </div>
+                <div class="flex flex-col gap-2.5">
+                  <h2 class="font-dm font-medium text-[60px] leading-[69px] tracking-[-0.8px]">UX Mentor</h2>
+                  <p class="text-skippr-muted text-2xl leading-8 max-w-[438px]">UX, product, accessibility, and content reviewed by expert-level agents around the clock.</p>
+                </div>
+              </div>
+              <p class="text-skippr-muted text-base leading-[27px] max-w-[409px]">
+                Built for fast-moving teams that ship UI, branding, and content without dedicated review teams. Connects to your stack or lives right in your browser.
+              </p>
+            </div>
+            <a href="#" class="bg-skippr-brown text-skippr-bg px-7 py-3 rounded-lg font-medium text-base inline-flex items-center gap-2 w-fit hover:bg-skippr-dark transition-colors">
+              Explore Skippr Mentor
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Product Specialist Card -->
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[49px] w-1/2 h-[606px] flex flex-col justify-between">
+            <div class="flex flex-col gap-10">
+              <div class="flex flex-col gap-6">
+                <div class="w-12 h-12 bg-[rgba(217,79,79,0.09)] rounded-xl flex items-center justify-center">
+                  <img src="https://www.figma.com/api/mcp/asset/d460d8b6-09ff-4694-9473-a26df191a0f1" alt="Presentation" class="w-6 h-6" />
+                </div>
+                <div class="flex flex-col gap-2.5">
+                  <h2 class="font-dm font-medium text-[60px] leading-[69px] tracking-[-0.8px]">Product Specialist</h2>
+                  <p class="text-skippr-muted text-2xl leading-8">A live agent with visual and voice skills that replaces an entire team of onboarding and product demo specialists.</p>
+                </div>
+              </div>
+              <p class="text-skippr-muted text-base leading-[27px]">
+                Joins meetings, embeds in your app, or runs async walkthroughs. Also works as an internal enablement engine, train your team on any topic, anytime.
+              </p>
+            </div>
+            <a href="#" class="bg-skippr-red text-white px-7 py-3 rounded-lg font-medium text-base inline-flex items-center gap-2 w-fit hover:bg-red-600 transition-colors">
+              Explore Skippr Specialist
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coming Soon Banner -->
+        <div class="bg-skippr-light border border-skippr-border rounded-2xl flex items-center justify-between px-14 py-12 h-[267px]">
+          <div class="flex flex-col gap-4">
+            <div class="bg-skippr-bg border border-skippr-border rounded-full px-3 py-1 flex items-center gap-2 w-fit">
+              <span class="w-1.5 h-1.5 bg-skippr-muted rounded-full opacity-80"></span>
+              <span class="text-skippr-muted font-medium text-base">Agent 3</span>
+            </div>
+            <h2 class="font-dm font-medium text-[60px] leading-[69px] tracking-[-0.8px] text-skippr-brown">Coming Soon</h2>
+            <p class="text-skippr-muted text-xl leading-[34px]">Something new is brewing. Sign up for early access.</p>
+          </div>
+          <div class="flex flex-col gap-3 w-[320px]">
+            <input type="email" placeholder="Enter your email" class="bg-skippr-bg border border-skippr-border rounded-lg px-4 h-[50px] text-base text-skippr-dark placeholder:text-skippr-dark/50 outline-none focus:border-skippr-brown transition-colors" />
+            <button class="bg-skippr-brown text-skippr-bg font-medium text-base rounded-lg h-[52px] hover:bg-skippr-dark transition-colors">
+              Get early access
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built for agent-first teams -->
+    <section class="px-[166px] py-20">
+      <div class="flex flex-col gap-2.5 mb-10">
+        <h3 class="text-[28px] font-medium leading-[39.2px]">Built for agent-first teams</h3>
+        <p class="text-skippr-muted text-xl leading-[34px]">End-to-end agents for real work.</p>
+      </div>
+
+      <div class="flex flex-col gap-8">
+        <!-- Row 1 -->
+        <div class="flex gap-8">
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/5f30bc68-2881-4c3c-9a9f-3275dd85a731" alt="Zap" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">End-to-end role coverage</p>
+            <p class="text-skippr-muted text-base leading-6">Replaces a full role, joins meetings, drafts the deliverable, sends follow-ups, and drives work to completion.</p>
+          </div>
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/a4aefddf-a0a3-4ad6-9202-d1f1260fb0d9" alt="Shield" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">Improves over time</p>
+            <p class="text-skippr-muted text-base leading-6">Adapts to your tone, templates, and preferences from real feedback and outcomes.</p>
+          </div>
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/c88e7669-9804-49d9-ba75-ae491d451810" alt="Users" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">Collaborates with your team</p>
+            <p class="text-skippr-muted text-base leading-6">Works via Slack and email—asks when needed, takes instructions, and incorporates feedback fast.</p>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="flex gap-8">
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/38910786-fa0d-4e00-94e2-c298e31061f4" alt="Refresh" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">Integrated when it matters</p>
+            <p class="text-skippr-muted text-base leading-6">Connects heedlessly to your tools for context and execution—without forcing a new workflow.</p>
+          </div>
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/a4aefddf-a0a3-4ad6-9202-d1f1260fb0d9" alt="Shield" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">Multi-modal expertise</p>
+            <p class="text-skippr-muted text-base leading-6">Skippr brings years of visual + voice experience—understanding products and user behavior with real context.</p>
+          </div>
+          <div class="bg-white border border-skippr-border rounded-2xl shadow-sm p-[25px] flex-1 flex flex-col gap-4 h-[232px]">
+            <div class="w-10 h-10 bg-skippr-light rounded-lg flex items-center justify-center">
+              <img src="https://www.figma.com/api/mcp/asset/c88e7669-9804-49d9-ba75-ae491d451810" alt="Users" class="w-6 h-6" />
+            </div>
+            <p class="font-medium text-xl leading-7">Security by design</p>
+            <p class="text-skippr-muted text-base leading-6">Access controls and data handling built for professional teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="px-[166px] py-12">
+      <div class="bg-skippr-brown rounded-2xl overflow-hidden relative h-[498px]">
+        <div class="relative z-10 flex flex-col gap-6 items-start p-14 max-w-[600px]">
+          <div class="bg-white/12 rounded-full px-3 py-1 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-skippr-red rounded-full"></span>
+            <span class="text-skippr-bg font-medium text-base">Start for free</span>
+          </div>
+          <h2 class="font-dm font-medium text-[60px] leading-[69px] tracking-[-0.8px] text-skippr-bg max-w-[508px]">
+            Start building your autonomous team
+          </h2>
+          <p class="text-xl leading-[34px] text-skippr-bg/75">
+            One agent. End-to-end work. Real output.
+          </p>
+        </div>
+        <div class="absolute left-14 bottom-14 z-10">
+          <a href="#" class="bg-skippr-red text-white px-7 py-3.5 rounded-lg font-medium text-base inline-block hover:bg-red-600 transition-colors">
+            Hire your first agent
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-skippr-brown relative z-10">
+      <div class="max-w-[1484px] mx-auto px-[60px] py-10">
+        <div class="flex justify-between items-start">
+          <!-- Logo -->
+          <div>
+            <img src="https://www.figma.com/api/mcp/asset/b3c6f461-4832-43b2-ac83-6e30ddf19e98" alt="Skippr" class="h-[60px] w-auto" />
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex gap-20">
+            <div class="flex flex-col gap-2.5 text-base w-[137px]">
+              <span class="text-skippr-bg/50">Skippr Apps</span>
+              <a href="#" class="text-skippr-bg hover:underline"><span class="font-semibold">Skippr |</span> Mentor</a>
+              <a href="#" class="text-skippr-bg hover:underline"><span class="font-semibold">Skippr |</span> Specialist</a>
+            </div>
+            <div class="flex flex-col gap-2.5 text-base w-[119px]">
+              <span class="text-skippr-bg/50">Company</span>
+              <a href="#" class="text-skippr-bg hover:underline">About Us</a>
+              <a href="#" class="text-skippr-bg hover:underline">Careers</a>
+            </div>
+            <div class="flex flex-col gap-2.5 text-base w-[119px]">
+              <span class="text-skippr-bg/50">Connect</span>
+              <a href="#" class="text-skippr-bg hover:underline">Linkedin</a>
+              <a href="#" class="text-skippr-bg hover:underline">Instagram</a>
+              <a href="#" class="text-skippr-bg hover:underline">X</a>
+            </div>
+            <div class="flex flex-col gap-2.5 text-base">
+              <span class="text-skippr-bg/50">Security</span>
+              <a href="#" class="text-skippr-bg hover:underline">Privacy Policy</a>
+              <a href="#" class="text-skippr-bg hover:underline">Terms of Services</a>
+              <div class="flex items-center mt-1">
+                <img src="https://www.figma.com/api/mcp/asset/df3ae7f4-717c-4989-b5b5-0d6b9ae463c9" alt="Badge" class="w-10 h-10 object-cover" />
+                <img src="https://www.figma.com/api/mcp/asset/d86ecd27-1b18-4e98-b45d-40c669c57566" alt="Badge" class="w-10 h-10 object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-skippr-bg/50 text-base mt-24">@2026 Skippr. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
